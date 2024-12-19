@@ -1,0 +1,11 @@
+#storefront--products {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#storefront--products p.loading {
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(var(--color-foreground), .5);
+}

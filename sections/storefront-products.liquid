@@ -1,0 +1,36 @@
+{{ 'section-storefront-products.css' | asset_url | stylesheet_tag }}
+
+<div class="content-container">
+  <div
+    id="storefront--products"
+    class="page-width grid"
+    data-collection-handle="{{ section.settings.collection.handle }}"
+  >
+    <p class="loading">Loading...</p>
+  </div>
+</div>
+
+<script src="{{ 'storefront-products.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Storefront Products",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Storefront Products"
+    }
+  ]
+}
+{% endschema %}
